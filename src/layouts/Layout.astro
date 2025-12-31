@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Cécile ROGER, Ostéopathe D.O. à Sion-les-Mines (44). Spécialisée nourrissons, femmes enceintes et adultes. Prenez rendez-vous en ligne." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+                
+                <!-- JSON-LD Structured Data -->
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Physician",
+                  "name": "Cécile ROGER Ostéopathe",
+                  "image": "", 
+                  "@id": "",
+                  "url": "https://cecileroger-osteopathe.fr",
+                  "telephone": "", 
+                            "priceRange": "50€",
+                            "paymentAccepted": "Cash, Check",
+                            "areaServed": [
+                              "Sion-les-Mines",
+                              "Châteaubriant",
+                              "Derval",
+                              "Saint-Aubin-des-Châteaux",
+                              "Lusanger",
+                              "Moisdon-la-Rivière",
+                              "Rougé"
+                            ],
+                            "address": {                              "@type": "PostalAddress",
+                              "streetAddress": "2 rue de St Sulpice",
+                              "addressLocality": "Sion-les-Mines",
+                              "postalCode": "44590",
+                              "addressCountry": "FR"
+                            },                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 47.7333,
+                    "longitude": -1.5833
+                  },
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                      ],
+                      "opens": "09:00",
+                      "closes": "19:00"
+                    },
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": "Saturday",
+                      "opens": "09:00",
+                      "closes": "13:00"
+                    }
+                  ]
+                }
+                </script>
+        	</head>	<body class="flex flex-col h-full font-sans text-gray-800 bg-white">
+        <Navbar />
+		<main class="flex-grow">
+			<slot />
+		</main>
+        <Footer />
+	</body>
+</html>
+
+<style>
+    /* Custom font integration if Tailwind config doesn't pick it up immediately */
+    :root {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+</style>
