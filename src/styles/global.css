@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --color-muted-teal: #9fb79d;
+  --color-mint-cream: #f6fdf8;
+  --color-rosy-taupe: #ba9593;
+  --color-carbon-black: #191919;
+  --color-graphite: #343434;
+
+  /* Semantic aliases */
+  --color-primary: var(--color-muted-teal);
+  --color-accent: var(--color-rosy-taupe);
+  --color-site-bg: var(--color-mint-cream);
+  --color-site-text: var(--color-carbon-black);
+  --color-site-text-muted: var(--color-graphite);
+}
+
+@layer base {
+  body {
+    @apply bg-mint-cream text-carbon-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-carbon-black;
+  }
+}

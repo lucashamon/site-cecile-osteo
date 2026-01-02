@@ -30,24 +30,24 @@ const faqs = [
 ---
 
 <Layout title="Foire Aux Questions - Cécile ROGER Ostéopathe" description="Réponses aux questions fréquentes sur l'ostéopathie : remboursement, déroulement, tenue, ordonnance.">
-    <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-8">
+    <div class="bg-mint-cream py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto divide-y-2 divide-muted-teal/20">
+            <h2 class="text-3xl font-extrabold text-carbon-black sm:text-4xl text-center mb-8">
                 Foire Aux Questions
             </h2>
-            <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+            <dl class="mt-6 space-y-6 divide-y divide-muted-teal/10">
                 {faqs.map((faq) => (
                     <div class="pt-6">
                         <details class="group">
                             <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                                <span class="text-lg text-gray-900 font-medium">
+                                <span class="text-lg text-carbon-black font-medium">
                                     {faq.question}
                                 </span>
-                                <span class="transition group-open:rotate-180">
+                                <span class="transition group-open:rotate-180 text-muted-teal">
                                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
-                            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+                            <p class="text-graphite mt-3 group-open:animate-fadeIn">
                                 {faq.answer}
                             </p>
                         </details>
@@ -56,16 +56,16 @@ const faqs = [
             </dl>
         </div>
         
-        <div class="mt-16 text-center border-t border-gray-200 pt-8">
-            <h3 class="text-lg font-bold text-red-600 uppercase tracking-wide mb-2">Urgence</h3>
-            <p class="text-base text-gray-600 mb-6">
+        <div class="mt-16 text-center border-t border-muted-teal/20 pt-8">
+            <h3 class="text-lg font-bold text-rosy-taupe uppercase tracking-wide mb-2">Urgence</h3>
+            <p class="text-base text-graphite mb-6">
                 Le cabinet n'assure pas les urgences vitales. <br>
                 <strong>En cas d'urgence, contactez immédiatement le 15 (SAMU).</strong>
             </p>
 
-            <p class="text-base text-gray-600 mb-4">Vous ne trouvez pas la réponse à votre question ?</p>
+            <p class="text-base text-graphite mb-4">Vous ne trouvez pas la réponse à votre question ?</p>
              <div class="inline-flex rounded-md shadow">
-                <a href="tel:0623490415" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700">
+                <a href="tel:0623490415" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-muted-teal hover:bg-muted-teal/90">
                     Appeler le 06 23 49 04 15
                 </a>
             </div>
