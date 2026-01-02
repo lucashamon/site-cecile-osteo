@@ -31,12 +31,12 @@ const { title, description = "Cécile ROGER, Ostéopathe D.O. à Sion-les-Mines 
                   "@context": "https://schema.org",
                   "@type": "Physician",
                   "name": "Cécile ROGER Ostéopathe",
-                  "image": "", 
-                  "@id": "",
+                  "image": "https://images.unsplash.com/photo-1519824145371-296894a0daa9", 
+                  "@id": "https://cecileroger-osteopathe.fr",
                   "url": "https://cecileroger-osteopathe.fr",
-                  "telephone": "", 
+                  "telephone": "+33623490415", 
                             "priceRange": "50€",
-                            "paymentAccepted": "Cash, Check",
+                            "paymentAccepted": "Espèces, Chèques",
                             "areaServed": [
                               "Sion-les-Mines",
                               "Châteaubriant",
@@ -88,6 +88,14 @@ const { title, description = "Cécile ROGER, Ostéopathe D.O. à Sion-les-Mines 
 		<main class="flex-grow">
 			<slot />
 		</main>
+        
+        <!-- Mobile Sticky CTA -->
+        <div class="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden z-50">
+            <a href="https://www.doctolib.fr/osteopathe/sion-les-mines/cecile-roger-erce-en-lamee" target="_blank" class="flex items-center justify-center w-full px-4 py-3 text-base font-bold text-white bg-teal-600 rounded-md hover:bg-teal-700 transition-colors">
+                Prendre Rendez-vous
+            </a>
+        </div>
+
         <Footer />
 	</body>
 </html>
