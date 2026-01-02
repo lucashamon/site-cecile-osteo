@@ -11,8 +11,8 @@ Professional showcase website for an osteopath based in Sion-les-Mines, France. 
 ## Key Project Rules (AI Context)
 - **Git Hooks:** Commit messages MUST follow Conventional Commits.
 - **Branching:** Branch names MUST follow `^(((feature|fix|renovate)\/..+)|master)$`.
-- **A11y:** Text contrast must be >= 4.5:1. Always use `text-gray-600` instead of `text-gray-500` on white.
-- **SEO:** Every page must have a unique `title` (max 60 chars) and `description`.
+- **A11y:** Text contrast must be >= 4.5:1.
+- **SEO: ** Every page must have a unique `title` (max 60 chars) and `description`.
 - **Mobile UI:** Maintain the sticky "Prendre RDV" button on mobile (`md:hidden`).
 - **Media:** Use `loading="lazy"` for all non-hero images. Use `fetchpriority="high"` for the hero image in `index.astro`.
 
