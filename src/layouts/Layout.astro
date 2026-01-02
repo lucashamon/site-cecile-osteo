@@ -9,6 +9,8 @@ interface Props {
 }
 
 const { title, description = "Cécile ROGER, Ostéopathe D.O. à Sion-les-Mines (44). Spécialisée nourrissons, femmes enceintes et adultes. Prenez rendez-vous en ligne." } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -19,6 +21,7 @@ const { title, description = "Cécile ROGER, Ostéopathe D.O. à Sion-les-Mines 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
