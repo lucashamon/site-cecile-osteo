@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
+# Site Internet - Cécile ROGER Ostéopathe
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Ce projet est le site vitrine professionnel de Cécile ROGER, Ostéopathe à Sion-les-Mines. Il est conçu pour présenter le cabinet, rassurer les patients, et faciliter la prise de rendez-vous.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Fonctionnalités Clés
 
-## 🚀 Project Structure
+*   **Présentation du cabinet :** Informations claires sur l'ostéopathe et ses spécialités (périnatalité, sportifs, etc.).
+*   **Prise de rendez-vous :** Intégration de boutons d'appel à l'action vers **Doctolib**, dont un bouton flottant sur mobile.
+*   **Localisation :** Carte interactive Google Maps et informations d'accès.
+*   **SEO & Performance :**
+    *   Optimisation SEO technique (Titres, Méta-descriptions, URL Canoniques).
+    *   Données structurées JSON-LD pour le référencement local (LocalBusiness/Physician).
+    *   Génération automatique du Sitemap (`sitemap.xml`) et fichier `robots.txt`.
+    *   Lazy loading des images et optimisation LCP.
+*   **Accessibilité :** Respect des contrastes de couleurs et balisage sémantique.
+*   **FAQ :** Une section dédiée aux questions fréquentes des patients.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠 Stack Technique
+
+*   **Framework :** [Astro](https://astro.build) (v5) - Pour la performance et la génération statique.
+*   **Styles :** [Tailwind CSS](https://tailwindcss.com) (v4) - Pour le design utility-first.
+*   **Langage :** TypeScript.
+*   **Déploiement :** Docker ready (`Dockerfile` & `nginx.conf`).
+
+## 🧞 Commandes
+
+Toutes les commandes sont à exécuter depuis la racine du projet :
+
+| Commande                  | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installe les dépendances                         |
+| `npm run dev`             | Démarre le serveur local sur `localhost:4321`    |
+| `npm run build`           | Construit le site pour la production (`./dist/`) |
+| `npm run preview`         | Prévisualise la version de production            |
+| `npm run astro ...`       | Commandes CLI Astro (`astro add`, etc.)          |
+
+## 📂 Structure du Projet
 
 ```text
 /
-├── public/
+├── public/             # Fichiers statiques (robots.txt, favicon, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/     # Composants réutilisables (Navbar, Footer, etc.)
+│   ├── layouts/        # Mises en page (Layout.astro avec <head> global)
+│   ├── pages/          # Pages du site (index, tarifs, faq, etc.)
+│   └── styles/         # CSS global
+└── astro.config.mjs    # Configuration Astro (Sitemap, Tailwind, Site URL)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🤝 Contribuer
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Merci de consulter le fichier [CONTRIBUTING.md](./CONTRIBUTING.md) avant de proposer des changements.

@@ -9,12 +9,28 @@ Thank you for contributing to this project! To ensure quality and consistency, p
 *   **Component Structure:** Keep Astro components focused and modular. Separate concerns where appropriate.
 *   **Styling:** Use Tailwind CSS utility classes for styling. Avoid custom CSS unless absolutely necessary.
 *   **Responsiveness:** Ensure all changes are responsive and work well on mobile, tablet, and desktop devices.
-*   **Accessibility:** Maintain high accessibility standards (semantic HTML, proper ARIA labels, sufficient contrast).
-*   **Performance:** Be mindful of performance. Optimize images and minimize bundle sizes.
+*   **Accessibility:** Maintain high accessibility standards (semantic HTML, proper ARIA labels, sufficient contrast > 4.5:1).
+*   **Performance:** Be mindful of performance. Optimize images (lazy loading) and minimize bundle sizes.
+
+## ✅ Development Checklist (Definition of Done)
+
+Before submitting your changes, please verify the following:
+
+1.  **Mobile First:** Does the feature look good and function correctly on mobile? (e.g., sticky buttons, readable text).
+2.  **SEO:**
+    *   Have you added/updated `title` and `description` meta tags?
+    *   Are images optimized with `alt` text and appropriate `loading` attributes (`lazy` vs `eager`)?
+    *   Did you update the `sitemap` config if needed (usually automatic)?
+3.  **Accessibility (a11y):**
+    *   Are text colors accessible against their background?
+    *   Do interactive elements have focus states?
+    *   Are `iframe` and images properly labeled?
+4.  **Conventions:** Did you follow the project structure and naming conventions?
+5.  **Clean Up:** Did you remove unused code or comments?
 
 ## Commit Message Convention
 
-We follow the **[Conventional Commits](https://www.conventionalcommits.org/)** specification. This provides an easy set of rules for creating an explicit commit history.
+We follow the **[Conventional Commits](https://www.conventionalcommits.org/)** specification.
 
 ### Format
 
