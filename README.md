@@ -4,7 +4,7 @@ Ce projet est le site vitrine professionnel de Cécile ROGER, Ostéopathe à Sio
 
 ## 🚀 Fonctionnalités Clés
 
-*   **Présentation du cabinet :** Informations claires sur l'ostéopathe et ses spécialités (somato-émotionnel, sportifs, etc.).
+*   **Présentation du cabinet :** Informations claires sur l'ostéopathe et ses spécialités (somato-émotionnel, nourrissons, femmes enceintes, sportifs).
 *   **Prise de rendez-vous :** Intégration de boutons d'appel à l'action vers **Doctolib**, dont un bouton flottant sur mobile.
 *   **Localisation :** Carte interactive Google Maps et informations d'accès.
 *   **SEO & Performance :**
