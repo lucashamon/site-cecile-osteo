@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: "Faut-il une ordonnance du médecin pour consulter ?",
+    answer: "Non, l'ostéopathe est un praticien de première intention. Vous pouvez consulter directement sans passer par votre médecin traitant. Cependant, n'hésitez pas à apporter vos examens médicaux (radios, IRM, scanners) si vous en avez."
+  },
+  {
+    question: "La consultation est-elle remboursée ?",
+    answer: "L'ostéopathie n'est pas prise en charge par la Sécurité Sociale. En revanche, de très nombreuses mutuelles remboursent tout ou partie des séances sur présentation d'une facture qui vous sera remise à la fin de la consultation."
+  },
+  {
+    question: "Combien de temps dure une séance ?",
+    answer: "Une consultation dure en moyenne entre 45 minutes et 1 heure. Ce temps comprend l'échange verbal (anamnèse), le diagnostic et le traitement."
+  },
+  {
+    question: "Est-ce que ça fait mal (le 'craquement') ?",
+    answer: "L'ostéopathie ne se résume pas au 'craquement' (techniques structurelles). J'adapte mes techniques à chaque patient (tissulaire, viscéral, crânien). Si une manipulation structurelle est nécessaire, elle est effectuée avec précision et douceur. Le bruit articulaire n'est pas synonyme d'efficacité et n'est pas douloureux."
+  },
+  {
+    question: "Comment habiller mon bébé pour la séance ?",
+    answer: "Prévoyez une tenue confortable et facile à enlever (body, pyjama). Pensez également à apporter son carnet de santé, un biberon si nécessaire, sa tétine et son doudou pour le rassurer."
+  },
+  {
+    question: "Quelle tenue porter pour une consultation adulte ?",
+    answer: "Il est préférable de porter des sous-vêtements confortables ou une tenue de sport souple (legging, short) dans laquelle vous êtes à l'aise pour bouger."
+  }
+];
+---
+
+<Layout title="Foire Aux Questions - Cécile ROGER Ostéopathe" description="Réponses aux questions fréquentes sur l'ostéopathie : remboursement, déroulement, tenue, ordonnance.">
+    <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-8">
+                Foire Aux Questions
+            </h2>
+            <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+                {faqs.map((faq) => (
+                    <div class="pt-6">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                <span class="text-lg text-gray-900 font-medium">
+                                    {faq.question}
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <p class="text-gray-500 mt-3 group-open:animate-fadeIn">
+                                {faq.answer}
+                            </p>
+                        </details>
+                    </div>
+                ))}
+            </dl>
+        </div>
+        
+        <div class="mt-16 text-center">
+            <p class="text-base text-gray-500 mb-4">Vous ne trouvez pas la réponse à votre question ?</p>
+             <div class="inline-flex rounded-md shadow">
+                <a href="tel:0623490415" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700">
+                    Appeler le 06 23 49 04 15
+                </a>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    /* Simple animation for smoother accordion */
+    details > summary {
+        list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
+</style>
